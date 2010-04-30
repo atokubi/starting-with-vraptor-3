@@ -1,4 +1,4 @@
-package com.wordpress.wbotelhos.dao;
+package com.wbotelhos.dao;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -7,11 +7,11 @@ import java.util.List;
 import br.com.caelum.vraptor.ioc.Component;
 import br.com.caelum.vraptor.ioc.SessionScoped;
 
-import com.wordpress.wbotelhos.model.Usuario;
+import com.wbotelhos.model.Usuario;
 
 /**
  * @author Washington Botelho dos Santos
- * @artigo http://wbotelhos.wordpress.com/2009/12/06/iniciando-com-vraptor-3/
+ * @artigo http://wbotelhos.com/2009/12/07/iniciando-com-vraptor-3
  */
 
 @SessionScoped

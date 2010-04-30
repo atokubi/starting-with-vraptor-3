@@ -1,6 +1,11 @@
-package com.wordpress.wbotelhos.model;
+package com.wbotelhos.model;
 
 import java.io.Serializable;
+
+/**
+ * @author Washington Botelho dos Santos
+ * @artigo http://wbotelhos.com/2009/12/07/iniciando-com-vraptor-3
+ */
 
 public class Usuario implements Serializable {
 

@@ -1,11 +1,11 @@
-package com.wordpress.wbotelhos.controller;
+package com.wbotelhos.controller;
 
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Resource;
 
 /**
  * @author Washington Botelho dos Santos
- * @artigo http://wbotelhos.wordpress.com/2009/12/06/iniciando-com-vraptor-3/
+ * @artigo http://wbotelhos.com/2009/12/07/iniciando-com-vraptor-3
  */
 
 @Resource

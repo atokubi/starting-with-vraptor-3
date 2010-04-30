@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>http://wbotelhos.wordpress.com</title>
+		<title>http://wbotelhos.com</title>
 	</head>
 	<body>
 		<form action="<c:url value='/usuario'/>" method="post">

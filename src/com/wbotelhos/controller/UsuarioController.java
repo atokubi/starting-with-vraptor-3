@@ -1,4 +1,4 @@
-package com.wordpress.wbotelhos.controller;
+package com.wbotelhos.controller;
 
 import java.util.List;
 
@@ -11,12 +11,12 @@ import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.view.Results;
 
-import com.wordpress.wbotelhos.dao.UsuarioDao;
-import com.wordpress.wbotelhos.model.Usuario;
+import com.wbotelhos.dao.UsuarioDao;
+import com.wbotelhos.model.Usuario;
 
 /**
  * @author Washington Botelho dos Santos
- * @artigo http://wbotelhos.wordpress.com/2009/12/06/iniciando-com-vraptor-3/
+ * @artigo http://wbotelhos.com/2009/12/07/iniciando-com-vraptor-3
  */
 
 @Resource
@@ -40,7 +40,7 @@ public class UsuarioController {
 	@Path("/usuario")
 	public void salvar(Usuario usuario) {
 		usuarioDao.salvar(usuario);
-		// Poderia ser resumido com: result.use(Results.logic()).redirectTo(getClass()).listagem();
+		// Poderia ser usado: result.use(Results.logic()).redirectTo(getClass()).listagem();
 		result.include("usuarioList", usuarioDao.loadAll());
 		result.use(Results.page()).forward("WEB-INF/jsp/usuario/listagem.jsp");
 	}
