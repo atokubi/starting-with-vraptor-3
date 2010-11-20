@@ -1,4 +1,4 @@
-package com.wbotelhos.dao;
+package br.com.wbotelhos.dao;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -6,16 +6,15 @@ import java.util.List;
 
 import br.com.caelum.vraptor.ioc.Component;
 import br.com.caelum.vraptor.ioc.SessionScoped;
-
-import com.wbotelhos.model.Usuario;
+import br.com.wbotelhos.model.Usuario;
 
 /**
  * @author Washington Botelho dos Santos
- * @artigo http://wbotelhos.com/2009/12/07/iniciando-com-vraptor-3
+ * @artigo http://wbotelhos.com.br/2009/12/07/iniciando-com-vraptor-3
  */
 
-@SessionScoped
 @Component
+@SessionScoped
 public class UsuarioDao implements Serializable {
 
 	private static final long serialVersionUID = -1917047398280846082L;
@@ -36,7 +35,7 @@ public class UsuarioDao implements Serializable {
 		Usuario usuarioDelete = null;
 
 		for (Usuario item : usuarioList) {
-			if (item.getId() == usuario.getId()) {
+			if (item.getId().intValue() == usuario.getId().intValue()) {
 				usuarioDelete = item;
 				break;
 			}

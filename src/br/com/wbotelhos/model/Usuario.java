@@ -1,10 +1,10 @@
-package com.wbotelhos.model;
+package br.com.wbotelhos.model;
 
 import java.io.Serializable;
 
 /**
  * @author Washington Botelho dos Santos
- * @artigo http://wbotelhos.com/2009/12/07/iniciando-com-vraptor-3
+ * @artigo http://wbotelhos.com.br/2009/12/07/iniciando-com-vraptor-3
  */
 
 public class Usuario implements Serializable {

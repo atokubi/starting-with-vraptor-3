@@ -1,4 +1,4 @@
-package com.wbotelhos.controller;
+package br.com.wbotelhos.controller;
 
 import java.util.List;
 
@@ -9,14 +9,12 @@ import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Put;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
-import br.com.caelum.vraptor.view.Results;
-
-import com.wbotelhos.dao.UsuarioDao;
-import com.wbotelhos.model.Usuario;
+import br.com.wbotelhos.dao.UsuarioDao;
+import br.com.wbotelhos.model.Usuario;
 
 /**
  * @author Washington Botelho dos Santos
- * @artigo http://wbotelhos.com/2009/12/07/iniciando-com-vraptor-3
+ * @artigo http://wbotelhos.com.br/2009/12/07/iniciando-com-vraptor-3
  */
 
 @Resource
@@ -40,9 +38,12 @@ public class UsuarioController {
 	@Path("/usuario")
 	public void salvar(Usuario usuario) {
 		usuarioDao.salvar(usuario);
-		// Poderia ser usado: result.use(Results.logic()).redirectTo(getClass()).listagem();
-		result.include("usuarioList", usuarioDao.loadAll());
-		result.use(Results.page()).forward("WEB-INF/jsp/usuario/listagem.jsp");
+
+		result
+			.include("usuarioList", usuarioDao.loadAll())
+			.forwardTo("WEB-INF/jsp/usuario/listagem.jsp");
+
+		// Poderia ser usado: result.redirectTo(this).listagem();
 	}
 
 	@Get
@@ -55,14 +56,14 @@ public class UsuarioController {
 	@Path("/usuario")
 	public void editar(Usuario usuario) {
 		Usuario entity = usuarioDao.loadById(usuario);
-		result.use(Results.logic()).redirectTo(getClass()).novo(entity);
+		result.redirectTo(this).novo(entity);
 	}
 	
 	@Delete
 	@Path("/usuario")
 	public void remover(Usuario usuario) {
 		usuarioDao.remover(usuario);
-		result.use(Results.logic()).redirectTo(getClass()).listagem();
+		result.redirectTo(this).listagem();
 	}
 
 }
