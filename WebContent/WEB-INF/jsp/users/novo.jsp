@@ -6,10 +6,10 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<title>http://wbotelhos.com.br</title>
+		<title>New User</title>
 	</head>
 	<body>
-		<form action="<c:url value='/usuario'/>" method="post">
+		<form action="<c:url value='/users'/>" method="post">
 			Nome: <input type="text" name="usuario.nome" value="${usuario.nome}"/><br/>
 			Senha: <input type="text" name="usuario.senha" value="${usuario.senha}"/><br/>
 			E-mail: <input type="text" name="usuario.email" value="${usuario.email}"/><br/>

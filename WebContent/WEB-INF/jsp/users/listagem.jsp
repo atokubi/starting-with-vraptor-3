@@ -9,7 +9,7 @@
 		<title>Users list</title>
 	</head>
 	<body>
-		<a href="<c:url value='/usuario/novo'/>">New user</a><br/>
+		<a href="<c:url value='/users/new'/>">New user</a><br/>
 
 		<table>
 			<thead>
@@ -26,17 +26,17 @@
 						<td>${item.senha}</td>
 						<td>${item.email}</td>
 						<td>
-							<form action="<c:url value='/usuario'/>" method="post">
+							<form action="<c:url value='/users'/>" method="post">
 								<input type='hidden' name='_method' value='put'/>
 								<input type='hidden' name='usuario.id' value='${item.id}'/>
-								<input type="submit" value="Editar"/>
+								<input type="submit" value="Edit"/>
 							</form>
 						</td>
 						<td>
-							<form action="<c:url value='/usuario'/>" method="post">
+							<form action="<c:url value='/users'/>" method="post">
 								<input type='hidden' name='_method' value='delete'/>
 								<input type='hidden' name='usuario.id' value='${item.id}'/>
-								<input type="submit" value="Excluir"/>
+								<input type="submit" value="Delete"/>
 							</form>
 						</td>
 					</tr>
