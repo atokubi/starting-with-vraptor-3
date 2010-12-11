@@ -18,49 +18,47 @@ import br.com.wbotelhos.model.Usuario;
  */
 
 @Resource
-public class UsuarioController {
+public class UsersController {
 
 	private Result result;
 	private UsuarioDao usuarioDao;
 	
-	public UsuarioController(Result result, UsuarioDao usuarioDao) {
+	public UsersController(Result result, UsuarioDao usuarioDao) {
 		this.result = result;
 		this.usuarioDao = usuarioDao;
 	}
 
 	@Get
-	@Path("/usuario/novo")
+	@Path("/users/new")
 	public void novo(Usuario usuario) {
 		result.include("usuario", usuario);
 	}
 
 	@Post
-	@Path("/usuario")
+	@Path("/users")
 	public void salvar(Usuario usuario) {
 		usuarioDao.salvar(usuario);
 
 		result
 			.include("usuarioList", usuarioDao.loadAll())
-			.forwardTo("WEB-INF/jsp/usuario/listagem.jsp");
-
-		// Poderia ser usado: result.redirectTo(this).listagem();
+			.forwardTo("WEB-INF/jsp/users/listagem.jsp");
 	}
 
 	@Get
-	@Path("/usuario")
+	@Path("/users")
 	public List<Usuario> listagem() {
 		return usuarioDao.loadAll();
 	}
 	
 	@Put
-	@Path("/usuario")
+	@Path("/users")
 	public void editar(Usuario usuario) {
 		Usuario entity = usuarioDao.loadById(usuario);
 		result.redirectTo(this).novo(entity);
 	}
 	
 	@Delete
-	@Path("/usuario")
+	@Path("/users")
 	public void remover(Usuario usuario) {
 		usuarioDao.remover(usuario);
 		result.redirectTo(this).listagem();

@@ -6,17 +6,17 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<title>http://wbotelhos.com.br</title>
+		<title>Users list</title>
 	</head>
 	<body>
-		<a href="<c:url value='/usuario/novo'/>">Adicionar</a><br/>
+		<a href="<c:url value='/usuario/novo'/>">New user</a><br/>
 
 		<table>
 			<thead>
 				<tr>
-					<th>Nome</th>
-					<th>Senha</th>
-					<th>E-mail</th>
+					<th>Name</th>
+					<th>Password</th>
+					<th>Email</th>
 				</tr>
 			</thead>
 			<tbody>

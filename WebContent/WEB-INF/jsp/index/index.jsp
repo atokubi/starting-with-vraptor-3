@@ -6,10 +6,10 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<title>http://wbotelhos.com.br</title>
+		<title>Index</title>
 	</head>
 	<body>
-		<a href="<c:url value='/usuario/novo'/>">Novo usu&aacute;rio</a><br/>
-		<a href="<c:url value='/usuario'/>">Listar usu&aacute;rio</a><br/>
+		<a href="<c:url value='/users/new'/>">New user</a><br/>
+		<a href="<c:url value='/users'/>">Show users</a><br/>
 	</body>
 </html>
