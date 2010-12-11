@@ -3,7 +3,7 @@
 <wb-module deploy-name="vraptor">
 <wb-resource deploy-path="/" source-path="/WebContent"/>
 <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-<property name="context-root" value="vraptor"/>
 <property name="java-output-path"/>
+        <property name="context-root" value="starting-with-vraptor-3"/>
 </wb-module>
 </project-modules>
