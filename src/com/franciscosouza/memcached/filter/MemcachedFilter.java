@@ -1,4 +1,4 @@
-package com.franciscosouza.java.memcached.filter;
+package com.franciscosouza.memcached.filter;
 
 import java.io.IOException;
 import java.io.PrintWriter;
