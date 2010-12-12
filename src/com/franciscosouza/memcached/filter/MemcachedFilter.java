@@ -73,7 +73,7 @@ public class MemcachedFilter implements Filter {
         String key = inRequest.getRequestURI();
         
         out.print(content);
-        mmc.set(key, 3600, content);
+        mmc.set(key, 36000, content);
     }
 
     /**
