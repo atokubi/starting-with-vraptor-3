@@ -67,13 +67,18 @@ public class MemcachedFilter implements Filter {
         
         HttpServletRequest inRequest = (HttpServletRequest) request;
         HttpServletResponse inResponse = (HttpServletResponse) response;
-        PrintWriter out = inResponse.getWriter();
         
         String content = wrapper.toString();
-        String key = inRequest.getRequestURI();
         
+        PrintWriter out = inResponse.getWriter();
         out.print(content);
-        mmc.set(key, 36000, content);
+        
+        String key = inRequest.getRequestURI();
+        mmc.delete(key);
+        
+        if (!inRequest.getMethod().equals("POST")) {
+            mmc.set(key, 5, content);
+        }
     }
 
     /**
