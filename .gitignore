@@ -1,3 +1,5 @@
+*.class
+
 WebContent/WEB-INF/classes
 classes
 build
