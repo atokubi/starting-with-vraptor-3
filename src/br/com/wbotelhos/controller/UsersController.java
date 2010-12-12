@@ -12,11 +12,6 @@ import br.com.caelum.vraptor.Result;
 import br.com.wbotelhos.dao.UsuarioDao;
 import br.com.wbotelhos.model.Usuario;
 
-/**
- * @author Washington Botelho dos Santos
- * @artigo http://wbotelhos.com.br/2009/12/07/iniciando-com-vraptor-3
- */
-
 @Resource
 public class UsersController {
 

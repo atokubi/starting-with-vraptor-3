@@ -8,11 +8,6 @@ import br.com.caelum.vraptor.ioc.Component;
 import br.com.caelum.vraptor.ioc.SessionScoped;
 import br.com.wbotelhos.model.Usuario;
 
-/**
- * @author Washington Botelho dos Santos
- * @artigo http://wbotelhos.com.br/2009/12/07/iniciando-com-vraptor-3
- */
-
 @Component
 @SessionScoped
 public class UsuarioDao implements Serializable {
